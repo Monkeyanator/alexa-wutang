@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests 
 
-
 def wutangName(name): 
 	url = 'http://www.mess.be/inickgenwuname.php' 
 	data = {'realname': name} 
