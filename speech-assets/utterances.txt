@@ -1,0 +1,2 @@
+WutangNameIntent wutang name for {name}
+WutangNameIntent what is the wutang name for {name}
