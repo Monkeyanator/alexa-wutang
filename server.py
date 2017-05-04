@@ -13,21 +13,21 @@ logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
 @ask.launch
 def launch():
-    speech_text = 'Prepare to Enter the Wu-tang. Speak your name, and I will christen your rap career.'
-    return question(speech_text).reprompt(speech_text).simple_card('HelloWorld', speech_text)
+    speech_text = 'Prepare to Enter the Wu-tang. Speak your name, and I will christen your rap career. '
+    return question(speech_text).reprompt(speech_text).simple_card('WutangName', speech_text)
 
 
 @ask.intent('WutangNameIntent')
 def wutang_name(name):
     wtName = wutangName(name) 
     speech_text = 'Your Wu-tang name is ' + wtName
-    return statement(speech_text).simple_card('HelloWorld', speech_text)
+    return statement(speech_text).simple_card('WutangName', speech_text)
 
 
 @ask.intent('AMAZON.HelpIntent')
 def help():
     speech_text = 'Ask me for my Wu-tang name!'
-    return question(speech_text).reprompt(speech_text).simple_card('HelloWorld', speech_text)
+    return question(speech_text).reprompt(speech_text).simple_card('WutangName', speech_text)
 
 
 @ask.session_ended
